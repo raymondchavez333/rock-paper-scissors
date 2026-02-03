@@ -40,11 +40,14 @@ function playGame(){
     let humanScore= 0;
     let computerScore= 0;
 
+    let display = document.querySelector(".result");
+    let display2 = document.querySelector(".result2");
+
     function playRound(HumanChoice,computerChoice){
         if(HumanChoice === "rock" && computerChoice === "paper"){
-            console.log("You Lose! Paper beats Rock.");
+            display.textContent = "You Lose! Paper beats Rock."
             computerScore = computerScore + 1;
-            console.log("Your Score: "+ humanScore+ " Computer Score: "+ computerScore);
+            display2.textContent = `Your Score: ${humanScore} Computer Score: ${computerScore}`;
         }else if(HumanChoice === "rock" && computerChoice === "rock"){
             console.log("Tie.");
             console.log("Your Score: "+ humanScore+ " Computer Score: "+ computerScore);
@@ -103,12 +106,10 @@ function playGame(){
     let rock = document.querySelector("#rock");
     let paper = document.querySelector("#paper");
     let scissors = document.querySelector("#scissors");
-    let display = document.querySelector(".result");
+    
 
     rock.addEventListener('click', () => {
         playRound("rock",getComputerChoice());
-
-
     }); 
 
     paper.addEventListener('click', () => {
