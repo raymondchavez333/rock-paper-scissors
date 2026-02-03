@@ -102,4 +102,12 @@ function playGame(){
 
 }
 
-playGame();
+// playGame();
+
+let rock = document.querySelector("#Rock");
+let paper = document.querySelector("#Paper");
+let scissors = document.querySelector("#Scissors");
+
+
+
+
