@@ -103,9 +103,11 @@ function playGame(){
     let rock = document.querySelector("#rock");
     let paper = document.querySelector("#paper");
     let scissors = document.querySelector("#scissors");
+    let display = document.querySelector(".result");
 
     rock.addEventListener('click', () => {
         playRound("rock",getComputerChoice());
+
 
     }); 
 
