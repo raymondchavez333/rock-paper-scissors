@@ -122,7 +122,14 @@ function playGame(){
 
     if(humanScore == 5){
 
-        
+        final.textContent= "Game Ended: Congratulations, you won!";
+        return;
+    }
+
+    if(computerScore == 5){
+
+        final.textContent= "Game Ended: Sorry, you lose!";
+        return;
     }
 
 }
