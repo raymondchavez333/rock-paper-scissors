@@ -106,7 +106,7 @@ function playGame(){
     let rock = document.querySelector("#rock");
     let paper = document.querySelector("#paper");
     let scissors = document.querySelector("#scissors");
-    
+    let final = document.querySelector(".final");
 
     rock.addEventListener('click', () => {
         playRound("rock",getComputerChoice());
@@ -119,6 +119,11 @@ function playGame(){
     scissors.addEventListener('click', () => {
         playRound("scissors",getComputerChoice());
     });
+
+    if(humanScore == 5){
+
+        
+    }
 
 }
 
