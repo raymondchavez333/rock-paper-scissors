@@ -81,6 +81,17 @@ function playGame(){
             console.log("Please input according to choices provided.");
         }
 
+        if(humanScore == 5){
+
+            final.textContent= "Game Ended: Congratulations, you won!";
+            return;
+        }
+
+        if(computerScore == 5){
+
+            final.textContent= "Game Ended: Sorry, you lose!";
+            return;
+        }
         
     }
     // const humanSelection = getHumanChoice();
@@ -120,17 +131,6 @@ function playGame(){
         playRound("scissors",getComputerChoice());
     });
 
-    if(humanScore == 5){
-
-        final.textContent= "Game Ended: Congratulations, you won!";
-        return;
-    }
-
-    if(computerScore == 5){
-
-        final.textContent= "Game Ended: Sorry, you lose!";
-        return;
-    }
 
 }
 
