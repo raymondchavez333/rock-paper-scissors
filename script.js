@@ -42,6 +42,7 @@ function playGame(){
 
     let display = document.querySelector(".result");
     let display2 = document.querySelector(".result2");
+    let buttons = document.querySelector(".buttons");
 
     function playRound(HumanChoice,computerChoice){
         if(HumanChoice === "rock" && computerChoice === "paper"){
@@ -84,13 +85,17 @@ function playGame(){
         if(humanScore == 5){
 
             final.textContent= "Game Ended: Congratulations, you won!";
-            return;
+            buttons.remove();
+            display.remove();
+            display2.remove();
         }
 
         if(computerScore == 5){
 
             final.textContent= "Game Ended: Sorry, you lose!";
-            return;
+            buttons.remove();
+            display.remove();
+            display2.remove();
         }
         
     }
